@@ -132,6 +132,7 @@ map mp <A-p>
 :map <leader>pw <Action>(SelectInProjectView)
 :map <leader>fs <Action>(FileStructurePopup)
 :map <leader>es <Action>(EditSource)
+:map <leader>fb <Action>(RecentFiles)
 
 " splits
 :nmap <leader>ps <Action>(PrevSplitter)

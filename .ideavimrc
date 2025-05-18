@@ -1,6 +1,6 @@
-plug 'preservim/nerdtree'
-plug 'tpope/vim-surround'
-plug 'terryma/vim-multiple-cursors'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
 
 set scrolloff=999
 set ignorecase smartcase
@@ -19,7 +19,7 @@ set showmode
 set surround
 set multicursor
 set highlightedyank
-set nerdtree
+set NERDTree
 set argtextobj
 
 " register leader
@@ -28,57 +28,57 @@ let mapleader = " "
 " clear search
 nnoremap <esc> :noh<return><esc>
 
-" change line, better use s for this.
-nmap cc 1s
+" Change line, better use S for this.
+nmap cc 1S
 
-" copy word
+" Copy Word
 nmap ,c yiw
 
-" select word
+" Select word
 nmap ,v viw
 
-" delete word without yanking
+" Delete word without yanking
 nnoremap d "_d
 vnoremap d "_d
 
-" yanking and deleting
-vnoremap j :m '>+1<cr>gv=gv
-vnoremap k :m '<-2<cr>gv=gv
-nnoremap j mzj`z
+" Yanking and Deleting
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap J mzJ`z
 
 " replace currently selected text with default register
 " without yanking it
-vnoremap <leader>p "_dp
+vnoremap <leader>p "_dP
 
-" center screen when jumping to next match
+" Center screen when jumping to next match
 nnoremap n nzz
-nnoremap n nzz
+nnoremap N Nzz
 vnoremap n nzz
-vnoremap n nzz
+vnoremap N Nzz
 
-" center screen when moving up and down
-nnoremap <c-u> <c-u>zz
-nnoremap <c-o> <c-d>zz
-vnoremap <c-u> <c-u>zz
-vnoremap <c-o> <c-d>zz
+" Center screen when moving up and down
+nnoremap <C-u> <C-u>zz
+nnoremap <C-o> <C-d>zz
+vnoremap <C-u> <C-u>zz
+vnoremap <C-o> <C-d>zz
 
 " easy window navigation
-" nnoremap <a-k> gt
+" nnoremap <a-k> gT
 " nnoremap <a-j> gt
 nnoremap <tab> gt
-nnoremap <s-tab> gt
+nnoremap <s-tab> gT
 
-" navigate window
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+" Navigate Window
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
-" resize window
-nmap <leader>m <action>(maximizeeditorinsplit)
+" Resize Window
+nmap <leader>m <Action>(MaximizeEditorInSplit)
 
-" save file
-nnoremap <leader>w <action>(savedocument)
+" Save File
+nnoremap <leader>w <Action>(SaveDocument)
 
 " clear the search buffer when hitting return
 nnoremap <leader><cr> :nohlsearch<cr>
@@ -92,94 +92,91 @@ map mx <a-x>
 map mp <a-p>
 
 " find and replace
-:map <leader>fw <action>(find)
-:map <leader>sr <action>(replace)
-:map <leader>fw <action>(findinpath)
-:map <leader>sr <action>(replaceinpath)
+:map <leader>sw <action>(Find)
+:map <leader>sr <action>(Replace)
+:map <leader>sW <action>(FindInPath)
+:map <leader>sR <action>(ReplaceInPath)
 
 " new class
-:nmap <leader>cn <action>(newelement)
-
-" generate code
-:map <leader>gra <action>(generate)
+:nmap <leader>cn <action>(NewElement)
 
 " code refactoring
-:map grn <action>(renameelement)
-:map <leader>r <action>(refactorings.quicklistpopupaction)
-:map <leader>fc <action>(reformatcode)
-:map <leader>sw <action>(surroundwith)
-:map <leader>dw <action>(unwrap)
-:map <leader>oi <action>(optimizeimports)
+:map <leader>fc <action>(ReformatCode)
+:map <leader>scw <action>(SurroundWith)
+:map <leader>dcw <action>(Unwrap)
+:map <leader>oi <action>(OptimizeImports)
 
 " preview code
-:map <leader>gpd <action>(quickimplementations)
+:map <leader>gpd <action>(QuickImplementations)
 
 " breakpoints
-:map <leader>bb <action>(togglelinebreakpoint)
-:map <leader>bs <action>(viewbreakpoints)
-:map <leader>br <action>(debugger.removeallbreakpoints)
+:map <leader>bb <action>(ToggleLineBreakpoint)
+:map <leader>bs <action>(ViewBreakpoints)
+:map <leader>br <action>(Debugger.RemoveAllBreakpoints)
 
 " comment out
-:map <leader>gc <action>(commentbylinecomment)
-:map <leader>gb <action>(commentbyblockcomment)
+:map gcc <action>(CommentByLineComment)
+:map gcb <action>(CommentByBlockComment)
 
 " code navigation
-:map ]d <action>(gotonexterror)
-:map [d <action>(gotopreviouserror)
-:map <leader>_ <action>(selectinprojectview)
-:map <leader>fs <action>(filestructurepopup)
-:map <leader>es <action>(editsource)
-:map <leader>fb <action>(recentfiles)
+:map ]d <action>(GotoNextError)
+:map [d <action>(GotoPreviousError)
+:map <leader>_ <action>(SelectInProjectView)
+:map <leader>fs <action>(FileStructurePopup)
+:map <leader>es <action>(EditSource)
+:map <leader>fb <action>(RecentFiles)
 
 " splits
-:nmap <leader>\ <action>(splitvertically)
-:nmap <leader>- <action>(splithorizontally)
-:nmap <leader>wmo <action>(moveeditortooppositetabgroup)
+:nmap <leader>\ <action>(SplitVertically)
+:nmap <leader>- <action>(SplitHorizontally)
+:nmap <leader>wmo <action>(MoveEditorToOppositeTabGroup)
 
 " git
-:map <leader>grr <action>(vcs.rollbackchangedlines)
+:map <leader>grr <action>(Vcs.RollbackChangedLines)
 
 " built-in navigation to navigated items works better
-:nmap <c-o> <action>(back)
-:nmap <c-i> <action>(forward)
+:nmap <c-o> <action>(Back)
+:nmap <c-i> <action>(Forward)
 
 " but preserve ideavim defaults
 :map g<c-o> <c-o>
 :map g<c-i> <c-i>
 
 " close stuff
-:map <leader>bd <action>(closeeditor)
-:map <leader>bd <action>(closealleditors)
+:map <leader>bd <action>(CloseEditor)
+:map <leader>bD <action>(CloseAllEditors)
 
 " reactivate some idea shortcuts
-:map <leader>se<action>(searcheverywhere)
-:map <leader>sf <action>(gotofile)
-:map <leader>ra <action>(runanything)
-:map <leader>sa <action>(gotoaction)
-:map <leader>sb <action>(recentfiles)
-:map grr <action>(showusages)
-:map grd <action>(gotodeclaration)
-:map gri <action>(gotoimplementation)
-:map grd <action>(gototypedeclaration)
+:map <leader>se <action>(SearchEverywhere)
+:map <leader>sf <action>(GotoFile)
+:map <leader>ra <action>(RunAnything)
+:map <leader>sa <action>(GotoAction)
+:map <leader>sb <action>(RecentFiles)
+:map grn <action>(RenameElement)
+:map grr <action>(ShowUsages)
+:map grd <action>(GotoDeclaration)
+:map gri <action>(GotoImplementation)
+:map grd <action>(GotoTypeDeclaration)
+:map gra <action>(Generate)
 
 " run
-:map <leader>cg <action>(chooserunconfiguration)
-:map <leader>cdg <action>(choosedebugconfiguration)
-:map <leader>1 <action>(run)
-:map <leader>2 <action>(debug)
-:map <leader>0 <action>(stop)
+:map <leader>cg <action>(ChooseRunConfiguration)
+:map <leader>cdg <action>(ChooseDebugConfiguration)
+:map <leader>1 <action>(Run)
+:map <leader>2 <action>(Debug)
+:map <leader>0 <action>(Stop)
 
 " debug
-nmap <leader>db <action>(togglelinebreakpoint)
-nmap <leader>dc <action>(resume)
-nmap <leader>do <action>(stepover)
-nmap <leader>di <action>(stepinto)
-nmap <leader>do <action>(stepout)
-nmap <leader>db <action>(evaluateexpression)
-nmap <leader>dc <action>(runtocursor)
+nmap <leader>db <action>(ToggleLineBreakpoint)
+nmap <leader>dc <action>(Resume)
+nmap <leader>do <action>(StepOver)
+nmap <leader>di <action>(StepInto)
+nmap <leader>dO <action>(StepOut)
+nmap <leader>dB <action>(EvaluateExpression)
+nmap <leader>dC <action>(RunToCursor)
 
 " terminal
-:nmap <c-\> <action>(activateterminaltoolwindow)
+:nmap <c-\> <action>(ActivateTerminalToolWindow)
 
 " source
 nnoremap <leader>si :source ~/.ideavimrc<cr>

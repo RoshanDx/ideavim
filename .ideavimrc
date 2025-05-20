@@ -92,10 +92,10 @@ map mx <a-x>
 map mp <a-p>
 
 " find and replace
-:map <leader>sw <action>(Find)
-:map <leader>sr <action>(Replace)
-:map <leader>sW <action>(FindInPath)
-:map <leader>sR <action>(ReplaceInPath)
+:map <leader>fw <action>(Find)
+:map <leader>fr <action>(Replace)
+:map <leader>fg <action>(FindInPath)
+:map <leader>fR <action>(ReplaceInPath)
 
 " new class
 :nmap <leader>cn <action>(NewElement)
@@ -124,7 +124,6 @@ map mp <a-p>
 :map <leader>_ <action>(SelectInProjectView)
 :map <leader>fs <action>(FileStructurePopup)
 :map <leader>es <action>(EditSource)
-:map <leader>fb <action>(RecentFiles)
 
 " splits
 :nmap <leader>\ <action>(SplitVertically)
@@ -132,7 +131,14 @@ map mp <a-p>
 :nmap <leader>wmo <action>(MoveEditorToOppositeTabGroup)
 
 " git
-:map <leader>grr <action>(Vcs.RollbackChangedLines)
+:map <leader>gq <action>(CloseContent)
+:map <leader>gr <action>(Vcs.RollbackChangedLines)
+:map <leader>gc <action>(Compare.SameVersion)
+:map <leader>gfh <action>(Vcs.ShowTabbedFileHistory)
+:map ]h <action>(NextDiff)
+:map [h <action>(PreviousDiff)
+:map ]f <action>(Diff.NextChange)
+:map [f <action>(Diff.PrevChange)
 
 " built-in navigation to navigated items works better
 :nmap <c-o> <action>(Back)
@@ -147,20 +153,20 @@ map mp <a-p>
 :map <leader>bD <action>(CloseAllEditors)
 
 " reactivate some idea shortcuts
-:map <leader>se <action>(SearchEverywhere)
-:map <leader>sf <action>(GotoFile)
+:map <leader>fg <action>(SearchEverywhere)
+:map <leader>ff <action>(GotoFile)
+:map <leader>fa <action>(GotoAction)
 :map <leader>ra <action>(RunAnything)
-:map <leader>sa <action>(GotoAction)
-:map <leader>sb <action>(RecentFiles)
+:map <leader>fb <action>(RecentFiles)
 :map grn <action>(RenameElement)
 :map grr <action>(ShowUsages)
 :map grd <action>(GotoDeclaration)
 :map gri <action>(GotoImplementation)
-:map grd <action>(GotoTypeDeclaration)
+:map grD <action>(GotoTypeDeclaration)
 :map gra <action>(Generate)
 
 " run
-:map <leader>cg <action>(ChooseRunConfiguration)
+:map <leader>rc <action>(ChooseRunConfiguration)
 :map <leader>cdg <action>(ChooseDebugConfiguration)
 :map <leader>1 <action>(Run)
 :map <leader>2 <action>(Debug)

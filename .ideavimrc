@@ -167,7 +167,7 @@ map mp <a-p>
 :map <leader>bD <action>(CloseAllEditors)
 
 " reactivate some idea shortcuts
-:map <leader>fg <action>(SearchEverywhere)
+:map <leader>fg <action>(FindInPath)
 :map <leader>ff <action>(GotoFile)
 :map <leader>fa <action>(GotoAction)
 :map <leader>ra <action>(RunAnything)

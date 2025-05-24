@@ -37,6 +37,14 @@ nmap ,c yiw
 " Select word
 nmap ,v viw
 
+" System clipboard support
+" nnoremap yy "+yy
+" vnoremap y "+y
+" nnoremap p "+p
+" vnoremap p "+p
+" nnoremap P "+P
+" vnoremap P "+P
+
 " Delete word without yanking
 nnoremap d "_d
 vnoremap d "_d
@@ -73,6 +81,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Resize Editor
+nmap <C-Left> <Action>(StretchSplitToLeft)
+nmap <C-Right> <Action>(StretchSplitToRight)
+nmap <C-Up> <Action>(StretchSplitToTop)
+nmap <C-Down> <Action>(StretchSplitToBottom)
 
 " Resize Window
 nmap <leader>m <Action>(MaximizeEditorInSplit)
@@ -164,6 +178,7 @@ map mp <a-p>
 :map gri <action>(GotoImplementation)
 :map grD <action>(GotoTypeDeclaration)
 :map gra <action>(Generate)
+:map grk <action>(QuickJavaDoc)
 
 " run
 :map <leader>rc <action>(ChooseRunConfiguration)
